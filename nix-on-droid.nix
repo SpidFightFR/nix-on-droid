@@ -34,6 +34,8 @@
     openssh
     bash-completion
     fastfetch
+    wget
+    curl
   ];
 
   # Read the changelog before changing this value
