@@ -1,6 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    #sub-config files
+    ./nix-cfgs/nvim.nix
+    ./nix-cfgs/env.nix
+  ];
+
   # Simply install just the packages
   environment.packages = with pkgs; [
     # User-facing stuff that you really really want to have
@@ -36,11 +42,6 @@
 
   # Read the changelog before changing this value
   system.stateVersion = "24.05";
-
-  # Set up nix for flakes
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
 
   # Set your time zone
   time.timeZone = "Europe/Paris";
