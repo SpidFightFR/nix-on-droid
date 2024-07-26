@@ -1,9 +1,7 @@
 { config, pkgs, lib, ... }:
 {
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-  };
+  environment.packages = with pkgs; [
+  (pkgs.writeScriptBin "vi" ''exec nvim "$@"'')
+  (pkgs.writeScriptBin "vim" ''exec nvim "$@"'')
+  ];
 }
