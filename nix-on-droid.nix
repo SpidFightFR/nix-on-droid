@@ -37,6 +37,8 @@
     fastfetch
     wget
     curl
+    ffmpeg
+    yt-dlp
   ];
 
   # Read the changelog before changing this value
