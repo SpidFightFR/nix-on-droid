@@ -39,6 +39,7 @@
     curl
     ffmpeg
     yt-dlp
+    htop
   ];
 
   # Read the changelog before changing this value
