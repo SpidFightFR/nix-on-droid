@@ -28,6 +28,7 @@
     xz
     zip
     unzip
+    iproute2
 
     #Custom list
     neovim
