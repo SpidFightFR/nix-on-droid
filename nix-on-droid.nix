@@ -6,6 +6,7 @@
     ./nix-cfgs/nvim.nix
     ./nix-cfgs/env.nix
     ./nix-cfgs/termux.nix
+    ./nix-cfgs/pentest.nix
   ];
 
   # Simply install just the packages
