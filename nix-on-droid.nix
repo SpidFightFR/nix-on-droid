@@ -29,6 +29,7 @@
     zip
     unzip
     iproute2
+    which
 
     #Custom list
     neovim
