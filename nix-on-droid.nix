@@ -4,6 +4,7 @@
   imports = [
     #sub-config files
     ./nix-cfgs/nvim.nix
+    ./nix-cfgs/nix.nix
     ./nix-cfgs/env.nix
     ./nix-cfgs/termux.nix
     ./nix-cfgs/pentest.nix
