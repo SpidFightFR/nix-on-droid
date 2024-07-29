@@ -3,11 +3,9 @@
 {
   imports = [
     #sub-config files
-    ./nix-cfgs/nvim.nix
     ./nix-cfgs/nix.nix
     ./nix-cfgs/env.nix
     ./nix-cfgs/termux.nix
-    ./nix-cfgs/pentest.nix
   ];
 
   # Simply install just the packages
@@ -32,18 +30,8 @@
     iproute2
     which
 
-    #Custom list
-    neovim
-    git
-    ncurses
-    openssh
-    bash-completion
-    fastfetch
-    wget
-    curl
-    ffmpeg
-    yt-dlp
-    htop
+    #Home-manager package
+    home-manager
   ];
 
   # Read the changelog before changing this value
@@ -51,4 +39,29 @@
 
   # Set your time zone
   time.timeZone = "Europe/Paris";
+
+
+  ### HOME MANAGER PART
+  # Configure home-manager
+    home-manager = {
+      backupFileExtension = "hm-bak";
+      useGlobalPkgs = true;
+
+      config =
+        { config, lib, pkgs, ... }:
+        {
+          # Read the changelog before changing this value
+          home.stateVersion = "24.05";
+
+          # insert home-manager config
+          imports = [
+          ./home-cfgs/bash.nix
+          ./home-cfgs/home-mgr.nix
+          ./home-cfgs/user-pkgs.nix
+          ./home-cfgs/pentest.nix
+          ./home-cfgs/nvim.nix
+          ];
+
+        };
+    };
 }
