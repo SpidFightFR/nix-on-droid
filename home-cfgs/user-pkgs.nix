@@ -10,5 +10,6 @@
     ffmpeg
     yt-dlp
     htop
+    tree
     ];
 }
