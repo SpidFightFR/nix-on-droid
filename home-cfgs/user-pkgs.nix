@@ -11,5 +11,6 @@
     yt-dlp
     htop
     tree
+    python3
     ];
 }
