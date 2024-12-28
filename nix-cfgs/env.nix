@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   #Equivalent of /etc/environment
@@ -10,7 +10,7 @@
   environment.etcBackupExtension = ".bak";
 
   #adds aliases to bins
-  environment.packages = with pkgs; [
+  environment.packages = [
   (pkgs.writeScriptBin "ff" ''exec fastfetch --logo android "$@"'')
   ];
 }
