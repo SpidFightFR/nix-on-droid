@@ -9,7 +9,7 @@
 alias ls='ls --color'
 alias ip='ip -c'
 alias grep='grep --color'
-alias ping='ping -c5'
+alias ping='/system/bin/ping -c5'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias back='cd; clear; ff'

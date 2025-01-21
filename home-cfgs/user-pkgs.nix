@@ -12,7 +12,6 @@
     htop
     tree
     python3
-    inetutils
     gawk
     ];
 }
