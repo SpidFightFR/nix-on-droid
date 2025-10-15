@@ -13,5 +13,6 @@
     tree
     python3
     gawk
+    ollama
     ];
 }
